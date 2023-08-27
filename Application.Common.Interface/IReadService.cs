@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace Application.Common.Interface
 {
     /// <summary>
-    /// Used to get dtos based on given query
+    /// Used to get dtos based on query Q
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Returns dto of type T</typeparam>
     public interface IReadService<T, Q>
     {
         Task<T> ReadAsync(Q query);
     }
    
     /// <summary>
-    /// Return dto of T
+    /// Return dto of type T
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public interface IReadService<T>
