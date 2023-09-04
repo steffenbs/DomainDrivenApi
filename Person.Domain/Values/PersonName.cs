@@ -11,7 +11,10 @@ namespace Person.Domain.Values
     {
         private PersonName(string property) : base(property)
         {
-
+            if (string.IsNullOrEmpty(property))
+            {
+                
+            }
         }
         public static PersonName Create(string input) => new PersonName(input);
     }

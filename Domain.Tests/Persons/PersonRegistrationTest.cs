@@ -16,12 +16,18 @@ namespace Domain.Tests.Persons
     {
         protected override void When()
         {
-            SUT.RegisterNewPerson(new NewPerson { Name = "Test"});
+            const string PersonName = "Test";
+            SUT.RegisterNewPerson(new NewPerson { Name = PersonName });
         }
         [Test]
         public void Then_should_register_new_person_event()
         {
             SUT.GetChanges().Any(x => x is PersonEvents.RegisterNewPerson).ShouldBeTrue();
-        } 
+        }
+        [Test]
+        public void Then_name_should_be_applied_to_domain_object()
+        {
+            SUT.PersonName.Property.ShouldEqual("Test");
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace Person.Domain
 
         protected override void EnsureValidState()
         {
+            
         }
 
         protected override void When(IDomainEvent @event)
