@@ -8,16 +8,27 @@ namespace Person.Domain
 {
     public sealed class PersonRegistration : AggregateRoot<PersonId>
     {
-        public PersonName PersonName { get; set; }
-        public void RegisterNewPerson(NewPerson p)
+        public PersonRegistration() {}
+        private PersonRegistration(PersonName personName) 
         {
-            Apply(new PersonEvents.RegisterNewPerson
+            PersonName = personName;
+        }
+        public PersonName PersonName { get; set; }
+    
+        public void ApplyEventsToDomain(IList<PersonEvents.DomainEvent> @events)
+        {
+            foreach (var @event in @events)
             {
-                Name = p.Name
-            });
+                Apply(@event);
+            }
         }
 
         protected override void EnsureValidState()
+        {
+            
+        }
+
+        protected override void PreValidation(IDomainEvent @event)
         {
             
         }
@@ -31,5 +42,7 @@ namespace Person.Domain
                 break;
             }
         }
+        public static PersonRegistration Create(PersonName personName)
+            => new PersonRegistration(personName);
     }
 }

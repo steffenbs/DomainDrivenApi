@@ -14,10 +14,17 @@ namespace Domain.Tests.Persons
 {
     public class PersonRegistrationTest : SpecsFor<PersonRegistration>
     {
+        protected override void InitializeClassUnderTest()
+        {
+            SUT = InitPersonDomain.CreateSUT();
+        }
         protected override void When()
         {
             const string PersonName = "Test";
-            SUT.RegisterNewPerson(new NewPerson { Name = PersonName });
+            var events = InitPersonDomain.DomainEvents;
+            events.Add(new PersonEvents.RegisterNewPerson{ Name = PersonName });
+            
+            SUT.ApplyEventsToDomain(events);
         }
         [Test]
         public void Then_should_register_new_person_event()

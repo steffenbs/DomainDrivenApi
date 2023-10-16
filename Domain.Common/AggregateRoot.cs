@@ -14,10 +14,12 @@ namespace Domain.Common
         public TId Id { get; set; }
         protected void Apply(IDomainEvent @event)
         {
+            PreValidation(@event);
             When(@event);
             EnsureValidState();
             changes.Add(@event);
         }
+        protected abstract void PreValidation(IDomainEvent @event);
         protected abstract void When(IDomainEvent @event);
         protected abstract void EnsureValidState();
         protected void ApplyToEntity(IInternalEventHandler entity, IDomainEvent @event) => entity?.Handle(@event);
