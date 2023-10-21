@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Tests", "Domain.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Common.Interface", "Application.Common.Interface\Application.Common.Interface.csproj", "{43096577-63D1-4649-AE25-0A59E1488083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.Domain", "Person.Domain\Person.Domain.csproj", "{99AB5D72-56B2-44E2-B1CC-6CBD47035B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person.Domain", "Person.Domain\Person.Domain.csproj", "{99AB5D72-56B2-44E2-B1CC-6CBD47035B14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.Application", "Person.Application\Person.Application.csproj", "{EFAA6A5C-E445-46B0-A6B6-0CB6DEF40EB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person.Application", "Person.Application\Person.Application.csproj", "{EFAA6A5C-E445-46B0-A6B6-0CB6DEF40EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.Models", "Person.Models\Person.Models.csproj", "{EEC9F616-4DB8-4AFB-9CF3-CE5FCFCDE22B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person.Models", "Person.Models\Person.Models.csproj", "{EEC9F616-4DB8-4AFB-9CF3-CE5FCFCDE22B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorData.Domain", "SensorData.Domain\SensorData.Domain.csproj", "{0FE906BA-988F-44F4-89A1-A3BCE30D20C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{EEC9F616-4DB8-4AFB-9CF3-CE5FCFCDE22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEC9F616-4DB8-4AFB-9CF3-CE5FCFCDE22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEC9F616-4DB8-4AFB-9CF3-CE5FCFCDE22B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE906BA-988F-44F4-89A1-A3BCE30D20C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE906BA-988F-44F4-89A1-A3BCE30D20C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE906BA-988F-44F4-89A1-A3BCE30D20C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE906BA-988F-44F4-89A1-A3BCE30D20C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
